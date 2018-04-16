@@ -69,10 +69,9 @@ h6 {
     font-weight: 600;
 }
 
-html,
-body {
-    height: 100%
+html {
 }
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -469,7 +468,7 @@ input:-webkit-autofill:focus {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -894,9 +893,9 @@ preloader
     left: 0;
     width: 100%;
     height: 100%;
-    background: #077771;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1c7796), to(#138fc2));
-    background: linear-gradient(to bottom, #15637e 0%, #195a74 100%);
+    background: #75cbe7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#75cbe7), to(#138fc2));
+    background: linear-gradient(to bottom, #2DDD9C 0%, rgb(13, 170, 112) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75cbe7', endColorstr='#138fc2', GradientType=0);
     z-index: 99999999999;
 }

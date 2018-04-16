@@ -57,7 +57,7 @@
         background-color: #ffffff;
     }
     .mainmenu-area #primary-menu {
-        background-color: #138FC2;
+        background-color: rgb(70, 196, 150);
     }
     .mainmenu-area #primary-menu ul {
         overflow-y: auto;
@@ -93,7 +93,8 @@
     }
 }
 
-
-/* Wide Mobile Layout: 480px. */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (max-width: 662px) {
+    .caption-slider .carousel-indicators li:before {
+        height: 0;
+    }
+}

@@ -17,26 +17,29 @@ Ajax Contact Form
     var $form = $('#contact-form');
 
     $form.submit(function (e) {
+        const formData = $( this ).serializeArray()
+        console.log("shit", formData);
         // remove the error class
         $('.form-group').removeClass('has-error');
         $('.help-block').remove();
 
         // get the form data
-        var formData = {
-            'name' : $('input[name="form-name"]').val(),
-            'email' : $('input[name="form-email"]').val(),
-            'subject' : $('input[name="form-subject"]').val(),
-            'message' : $('textarea[name="form-message"]').val()
-        };
+        // var formData = {
+        //     'contactName' : $('input[name="form-name"]').val(),
+        //     'contactEmail' : $('input[name="form-email"]').val(),
+        //     'contactSubject' : $('input[name="form-subject"]').val(),
+        //     'contactMessage' : $('textarea[name="form-message"]').val()
+        // };
 
         // process the form
         $.ajax({
             type : 'POST',
-            url  : 'process.php',
+            url  : '/contact-form',
             data : formData,
             dataType : 'json',
             encode : true
         }).done(function (data) {
+            console.log(data);
             // handle errors
             if (!data.success) {
                 if (data.errors.name) {
